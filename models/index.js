@@ -1,9 +1,3 @@
-// import models
-const Product = require("./Product");
-const Category = require("./Category");
-const Tag = require("./Tag");
-const ProductTag = require("./ProductTag");
-
 // Products belongsTo Category
 const Product = require("./Product");
 // Categories have many Products
@@ -14,7 +8,7 @@ const ProductTag = require("./ProductTag");
 const Tag = require("./Tag");
 
 Product.hasMany(Category, Tag, ProductTag, {
-  foreignKey: "product_name",
+  foreignKey: "product_id",
 });
 
 Category.hasMany(Product, {
