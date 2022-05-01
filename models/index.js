@@ -12,7 +12,7 @@ Product.hasMany(Category, Tag, ProductTag, {
 });
 
 Category.hasMany(Product, {
-  foreignKey: "category_name",
+  foreignKey: "category_id",
 });
 
 module.exports = {
